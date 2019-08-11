@@ -136,7 +136,8 @@ footer {
 /** Main contents **/
 main {
   background-color: var(--scnd-cl, crimson);
-  flex: 1 1 400px;
+  min-height: 400px;
+  flex: 1 1 auto;
 }
 
 .content-wrapper {
