@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>M. Phuong Phan Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <div class="container-fluid full-page">
+        <header>
+            <h1>M. Phuong Phan</h1>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html" class="jump">Home</a></li>
+                    <li class="active"><a href="../../projects.html" class="jump">Projects</a></li>
+                    <li><a href="../../resume.html" class="jump">Resume</a></li>
+                    <li><a href="../../about.html" class="jump">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- As of now the projects only look good if its name only consists of one line and project description isn't too long-->
+        <main id="frogger-content" class="content-wrapper text-main">
+            <h2 class="text-center">Kaggle's Titanic Classification Challenge</h2>
+            <p><span style="font-size: 2.3rem;" class="fab fa-github animated bounce"></span>&nbsp;<a
+                    href="https://github.com/pmphan/titanic-classification" target="_blank" rel="noopener">Find the
+                    source code here.</a>
+            </p>
+            <h3>Overview</h3>
+            <p>A project to test my understanding after finishing Andrew Ng's <a
+                    href="https://www.coursera.org/learn/machine-learning" target="_blank" rel="noopenner">Machine
+                    Learning course</a> using <a href="https://www.kaggle.com/c/titanic" target="_blank"
+                    rel="noopenner">Kaggle's dataset</a>. The objective is to predict a passenger survivability during
+                the Titanic disaster.</p>
+            <p>My accuracy on the test set is currently <b>0.78947</b>.</p>
+            <h3>What's in the source code?</h3>
+            <p>There are 3 Jupyter notebook files: analysis, process and train. They do exactly as expected.
+                <code>analysis.ipynb</code> contains my analysis of data, <code>process.ipynb</code> is where I process
+                the data, and <code>train.ipynb</code> documents the training process.</p>
+            <h3>What I did</h3>
+            <p>After the analysis, my decision on the process steps is:
+                <ol>
+                    <li>Extract Title features from Name features. Change Mlle to Miss and Mme to Mrs since they are
+                        essentially the same.</li>
+                    <li>Fill in missing Age info based on Title, missing Fare info based on Pclass, and missing Embarked
+                        info by most common port.</li>
+                    <li>Reduce numbers of unique titles (combine titles with less than 10 examples). Convert Title, Sex
+                        and Embarked port data into numerical labels (or onehot encode them).</li>
+                    <li>Combine SibSp and Parch into one FamilySize feature.</li>
+                    <li>Norminalize Fare and Age.</li>
+                    <li>Drop Ticket, Name, PassengerId and Cabin columns.</li>
+                </ol>
+            </p>
+            <p>Then the data is trained using multiple models: Logistic Regression, Support Vector Machine, Linear
+                Support Vector Machine, K-Nearest Neighbor, Naive Bayes, Perceptron, Stochastic Gradient Descent, Random
+                Forest and Decision Tree. In the end, Support Vector Machine does the best and was picked for the final
+                prediction on test set.</p>
+            <h3>Training result</h3>
+            <img class="prj-media" src="./result.png" alt="Training result across models">
+        </main>
+        <footer id="contact">
+            <p class="text-center"><a href="../../index.html">Home</a> | <a href="../../projects.html">Projects</a> | <a
+                    href="../../resume.html">Resume</a> | <a href="../../about.html">About</a></p>
+            <div class="text-center">
+                <a href="https://github.com/pmphan" aria-label="Go to my GitHub" target="_blank" rel="noopener"><span
+                        class="fab fa-github icon jump"></span></a>
+                <a href="mailto:mtphan@smith.edu" aria-label="Email me" target="_blank" rel="noopener"><span
+                        class="fa fa-envelope icon jump"></span></a>
+                <a href="https://facebook.com/al.phuong" aria-label="Go to my Facebook" target="_blank"
+                    rel="noopener"><span class="fab fa-facebook icon jump"></span></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

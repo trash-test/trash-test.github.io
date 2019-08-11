@@ -1,0 +1,278 @@
+@import "https://fonts.googleapis.com/css?family=Lato&display=swap";
+
+:root {
+  --bg-cl: #232B2B;
+  --content-cl: #FFFFFF;
+  --scnd-cl: #c2061f;
+}
+
+html {
+  font-size: 10px;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--bg-cl, black);
+  color: var(--content-cl, white);
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.7rem;
+  padding: 2rem 0;
+}
+
+h3 {
+  font-size: 2.1rem;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+code {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: var(--scnd-cl, white);
+}
+
+.prj-media {
+  max-width: 100%;
+  max-height: 85vh;
+  height: auto;
+  margin: 10px auto 30px;
+}
+
+.full-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/** Navigation bar **/
+header {
+  flex: 0 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  padding: 0 3%;
+}
+
+header h1 {
+  font-size: 3rem;
+  flex: 2 2;
+  padding-left: 2%;
+  margin: auto;
+  min-width: 300px;
+}
+
+nav {
+  flex-grow: 1;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  height: 100%;
+}
+
+nav li {
+  width: 100%;
+  padding: 0 10px;
+}
+
+nav a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+nav a:hover, nav a:focus {
+  text-decoration: none;
+}
+  
+.active {
+  background-color: var(--scnd-cl, crimson);
+}
+
+a {
+  color: var(--content-cl, white);
+}
+
+a:hover, a:focus {
+  color: var(--content-cl, white);
+}
+
+a:visited {
+  color: var(--content-cl, white);
+}
+
+.jump {
+  transition: transform 400ms ease-in-out;
+}
+
+.jump:hover {  
+  transform: translate(0, 7px);
+}
+
+/** Footer **/
+.icon {
+  font-size: 4rem;
+  margin: 10px;
+}
+
+footer {
+  margin: 20px 0 10px;
+  flex: 0 1 auto;
+}
+
+/** Main contents **/
+main {
+  background-color: var(--scnd-cl, crimson);
+  flex: 1 1 400px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20vw 20px;
+}
+
+/** Home **/
+#home-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0;
+}
+
+#portrait {
+  min-height: 200px;
+}
+
+/** Projects **/
+#projects-content {
+  padding: 60px;
+}
+
+#projects-content #project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-gap: 6rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow: auto;
+  list-style: none;
+}
+
+#projects-content .project-tile {
+  position: relative;
+  padding-bottom: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background-color: white;
+}
+
+#projects-content .project-img {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  max-width: 5000px;
+  transition: opacity 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+}
+
+#projects-content .project-text {
+  --top-offset : calc(100% - 4rem);
+  max-height: calc(100% + 1px);
+  width: 100%;
+  position: absolute;
+  top: var(--top-offset, 100%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0;
+  transition: transform 300ms ease-in-out;
+}
+
+#projects-content .project-desc {
+  text-align: left;
+  padding: 0 10px;
+}
+
+#projects-content .project-tile:hover .project-text,
+#projects-content .project-tile:focus .project-text {
+  transform: translateY(calc(-1*var(--top-offset, 100%) + 0.5px));
+}
+
+#projects-content .project-tile:hover .project-img,
+#projects-content .project-tile:focus .project-img {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+/** Resume **/
+#resume-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+}
+
+#resume-content .pdf {
+  width: 60%;
+  height: calc(60vw * 1.2);
+}
+
+/** About **/
+#about-content p {
+  margin: 1em;
+}
+
+@media (max-width: 700px) {
+  #projects-content {
+    padding: 0 20px 6rem;
+  }
+}
+
+@media (max-width: 420px) {
+  header h1 {
+    min-width: 100%;
+    padding: 10px 0;
+  }
+ 
+  .text-main {
+    margin: auto;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (orientation: portrait) {
+  #home-content {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  #portrait {
+    margin-bottom: 60px;
+    width: 50%;
+    height: auto;
+  }
+}

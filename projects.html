@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>M. Phuong Phan Homepage</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container-fluid full-page">
+    <header>
+      <h1>M. Phuong Phan</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="jump">Home</a></li>
+          <li class="active"><a href="./projects.html" class="jump">Projects</a></li>
+          <li><a href="./resume.html" class="jump">Resume</a></li>
+          <li><a href="./about.html" class="jump">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- As of now the projects only look good if its name only consists of one line and project description isn't too long-->
+    <main id="projects-content" class="content-wrapper">
+      <h2 class="text-center">My Projects</h2>
+      <section id="project-grid">
+        <a class="project-tile text-center" href="./projects/fourier-transform/fourier.html">
+          <img class="project-img" src="./projects/fourier-transform/thumbnail.png" alt="Fourier thumbnail">
+          <div class="project-text">
+            <h3>Fourier Transform Visual (PyQt)</h3>
+            <p class="project-desc">This is my personal project done in PyQt. It uses one set of epicycles to visualize
+              Discrete Fourier Transform on any function.</p>
+          </div>
+        </a>
+        <a class="project-tile text-center" href="./projects/graph-gui/graph.html">
+          <img class="project-img" src="./projects/graph-gui/thumbnail.png" alt="Graph thumbnail">
+          <div class="project-text">
+            <h3>Graph Application (Java)</h3>
+            <p class="project-desc">Final Project for my Data Structure class. This is an implementataion of the graph
+              data structure, which is then used to create an application let users build graph interactively.</p>
+          </div>
+        </a>
+        <a class="project-tile text-center" href="./projects/titanic-classification/titanic.html">
+          <img class="project-img" src="./projects/titanic-classification/thumbnail.png" alt="Titanic thumbnail">
+          <div class="project-text">
+            <h3>Titanic Classification (Sklearn)</h3>
+            <p class="project-desc">My first real attempt at a simple project in Machine Learning. The dataset is taken
+              from Kaggle.</p>
+          </div>
+        </a>
+        <a class="project-tile text-center" href="./projects/frogger/frogger.html">
+          <img class="project-img" src="./projects/frogger/thumbnail.png" alt="Frogger thumbnail">
+          <div class="project-text">
+            <h3>Frogger (Python)</h3>
+            <p class="project-desc">This is my Final Project for Intro to ComSci class. It is a simple recreation of the
+              classic game Frogger using Zelle's graphics.py library.</p>
+          </div>
+        </a>
+      </section>
+    </main>
+    <footer id="contact">
+      <p class="text-center"><a href="./index.html">Home</a> | <a href="./projects.html">Projects</a> | <a
+          href="./resume.html">Resume</a> | <a href="./about.html">About</a></p>
+      <div class="text-center">
+        <a href="https://github.com/pmphan" aria-label="Go to my GitHub" target="_blank" rel="noopener"><span
+            class="fab fa-github icon jump"></span></a>
+        <a href="mailto:mtphan@smith.edu" aria-label="Email me" target="_blank" rel="noopener"><span
+            class="fa fa-envelope icon jump"></span></a>
+        <a href="https://facebook.com/al.phuong" aria-label="Go to my Facebook" target="_blank" rel="noopener"><span
+            class="fab fa-facebook icon jump"></span></a>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

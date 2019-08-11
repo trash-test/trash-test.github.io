@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>M. Phuong Phan Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <div class="container-fluid full-page">
+        <header>
+            <h1>M. Phuong Phan</h1>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html" class="jump">Home</a></li>
+                    <li class="active"><a href="../../projects.html" class="jump">Projects</a></li>
+                    <li><a href="../../resume.html" class="jump">Resume</a></li>
+                    <li><a href="../../about.html" class="jump">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- As of now the projects only look good if its name only consists of one line and project description isn't too long-->
+        <main id="frogger-content" class="content-wrapper text-main">
+            <h2 class="text-center">Frogger in Python</h2>
+            <p><span style="font-size: 2.3rem;" class="fab fa-github animated bounce"></span>&nbsp;<a
+                    href="https://github.com/pmphan/frogger" target="_blank" rel="noopener">Find the source code
+                    here.</a>
+            </p>
+            <h3>Overview</h3>
+            <p>This is my final project for Intro to ComSci class. It is a simple recreation of the classic game Frogger
+                using Zelle's <a style="color: var(--scnd-cl, crimson);" href="https://mcsp.wartburg.edu/zelle/python/graphics.py" target="_blank"
+                    rel="noopener"><code>graphics.py</code></a></p> library.</p>
+            <h3>What I did</h3>
+            <p>I wrote the code. The ingame sprites are editted by me from existing sprites. Link to source sprites can
+                be found in the <code>README.md</code> of the source code.</p>
+            <h3>Gameplay</h3>
+            <p>The objective is to move the frog from one side of the street to the other without colliding with
+                obstacles. The player controls the frog using arrow keys.</p>
+            <p>Here's what the gameplay looks like:</p>
+            <video class="prj-media" controls>
+                <source src="gameplay.mp4" type="video/mp4">
+            </video>
+        </main>
+        <footer id="contact">
+            <p class="text-center"><a href="../../index.html">Home</a> | <a href="../../projects.html">Projects</a> | <a
+                    href="../../resume.html">Resume</a> | <a href="../../about.html">About</a></p>
+            <div class="text-center">
+                <a href="https://github.com/pmphan" aria-label="Go to my GitHub" target="_blank" rel="noopener"><span
+                        class="fab fa-github icon jump"></span></a>
+                <a href="mailto:mtphan@smith.edu" aria-label="Email me" target="_blank" rel="noopener"><span
+                        class="fa fa-envelope icon jump"></span></a>
+                <a href="https://facebook.com/al.phuong" aria-label="Go to my Facebook" target="_blank"
+                    rel="noopener"><span class="fab fa-facebook icon jump"></span></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

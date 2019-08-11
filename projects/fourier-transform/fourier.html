@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>M. Phuong Phan Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <div class="container-fluid full-page">
+        <header>
+            <h1>M. Phuong Phan</h1>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html" class="jump">Home</a></li>
+                    <li class="active"><a href="../../projects.html" class="jump">Projects</a></li>
+                    <li><a href="../../resume.html" class="jump">Resume</a></li>
+                    <li><a href="../../about.html" class="jump">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- As of now the projects only look good if its name only consists of one line and project description isn't too long-->
+        <main id="frogger-content" class="content-wrapper text-main">
+            <h2 class="text-center">Discrete Fourier Transform Visualization in PyQt</h2>
+            <p><span style="font-size: 2.3rem;" class="fab fa-github animated bounce"></span>&nbsp;<a
+                    href="https://github.com/pmphan/fourier-transform" target="_blank" rel="noopener">Find the source
+                    code here.</a>
+            </p>
+            <h3>Overview</h3>
+            <p>This is my personal project inspired by <a
+                    href="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw" target="_blank"
+                    rel="noopener">3Blue1Brown</a>'s <a href="https://www.youtube.com/watch?v=r6sGWTCMz2k"
+                    target="_blank" rel="noopener">video on Fourier Transform and Heat Equation</a>. This projects uses
+                Discrete Fourier Transform, first breaking a given function into a finite set of frequencies, each is
+                then represented by a circle rotating at a constant rate. These cirlces are stacked upon each other and
+                the tip of last one in the sequence will draw out the shape of the given function. It can either take in
+                an <code>.svg</code> file as the function or the user can click and drag on the screen to draw the function.</p>
+            <p>This project is done with PyQt for the graphics, since I thought I need to learn a decent Python GUI
+                library.</p>
+            <h3>Note</h3>
+            <p>Ideally, the input <code>.svg</code> should only consist of one continuous path. Having multiple discontinuous paths
+                will yield result with lines connecting those paths.</p>
+            <p>The input <code>.svg</code> file should be placed in the svg folder. You can also provide the program with a path to
+                the <code>.svg</code> file in the source code.</p>
+            <h3>Demo</h3>
+            <p>Here's a Pi symbol and a Treble Clef drawn by 401 circles each rotating at a constant frequency:
+            </p>
+            <video class="prj-media" controls>
+                <source src="svg_demo.mp4" type="video/mp4">
+            </video>
+            <p>Here's a "Hello" drawn by me reconstructed by 601 circles:</p>
+            <video class="prj-media" controls>
+                <source src="draw_demo.mp4" type="video/mp4">
+            </video>
+        </main>
+        <footer id="contact">
+            <p class="text-center"><a href="../../index.html">Home</a> | <a href="../../projects.html">Projects</a> | <a
+                    href="../../resume.html">Resume</a> | <a href="../../about.html">About</a></p>
+            <div class="text-center">
+                <a href="https://github.com/pmphan" aria-label="Go to my GitHub" target="_blank" rel="noopener"><span
+                        class="fab fa-github icon jump"></span></a>
+                <a href="mailto:mtphan@smith.edu" aria-label="Email me" target="_blank" rel="noopener"><span
+                        class="fa fa-envelope icon jump"></span></a>
+                <a href="https://facebook.com/al.phuong" aria-label="Go to my Facebook" target="_blank"
+                    rel="noopener"><span class="fab fa-facebook icon jump"></span></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
