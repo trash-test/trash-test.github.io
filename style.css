@@ -213,12 +213,14 @@ main {
 }
 
 #projects-content .project-tile:hover .project-text,
-#projects-content .project-tile:focus .project-text {
+#projects-content .project-tile:focus .project-text,
+#projects-content .project-tile:active .project-text {
   transform: translateY(calc(-1*var(--top-offset, 100%) + 0.5px));
 }
 
 #projects-content .project-tile:hover .project-img,
-#projects-content .project-tile:focus .project-img {
+#projects-content .project-tile:focus .project-img,
+#projects-content .project-tile:active .project-img {
   opacity: 0.5;
   transform: scale(1.1);
 }
