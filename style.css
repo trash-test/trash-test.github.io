@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Lato&display=swap";
+@import "https://fonts.googleapis.com/css?family=Lato|EB+Garamond&display=swap";
 
 :root {
   --bg-cl: #232B2B;
@@ -51,6 +51,10 @@ code {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+}
+
+hr {
+  margin: 0;
 }
 
 /** Navigation bar **/
@@ -180,7 +184,6 @@ main {
   padding-bottom: 100%;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
   text-decoration: none;
   background-color: white;
 }
@@ -198,24 +201,31 @@ main {
 
 #projects-content .project-text {
   --top-offset : calc(100% - 4rem);
-  max-height: calc(100% + 1px);
-  width: 100%;
   position: absolute;
-  top: var(--top-offset, 100%);
+  width: 100%;
+  top: var(--top-offset, 90%);
+  max-height: calc(100% + 1px);
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 0;
+  padding: 0 10px;
   transition: transform 300ms ease-in-out;
+}
+
+.no-decoration:hover, . {
+  text-decoration: none;
 }
 
 #projects-content .project-desc {
   text-align: left;
-  padding: 0 10px;
+}
+
+#projects-content .project-git {
+  text-align: left;
 }
 
 #projects-content .project-tile:hover .project-text,
 #projects-content .project-tile:focus .project-text,
 #projects-content .project-tile:active .project-text {
-  transform: translateY(calc(-1*var(--top-offset, 100%) + 0.5px));
+  transform: translateY(calc(-1*var(--top-offset, 100%) - 0.5px));
 }
 
 #projects-content .project-tile:hover .project-img,
@@ -227,15 +237,66 @@ main {
 
 /** Resume **/
 #resume-content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 30px;
+  padding: 0;
+  font-size: 1rem;
 }
 
-#resume-content .pdf {
-  width: 60%;
-  height: calc(60vw * 1.2);
+#resume-content #resume {
+  font-family: 'EB Garamond', serif;
+  font-size: 2.4em;
+  padding: 30px;
+  margin: 30px;
+}
+
+#resume-content p {
+  margin: 0; padding: 0;
+}
+
+#resume-content #resume-name {
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+#resume-content #resume-subtitle {
+  font-size: 1.2em;
+}
+
+#resume-content #download-resume {
+  padding: 30px 0;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+#resume-content .flex-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#resume-content .item-title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#resume-content .item-subtitle {
+  font-style: italic;
+}
+
+#resume-content .resume-heading {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin-top: 30px;
+}
+
+#resume-content li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#resume-content .bullet:before {
+  content: "\2022 \a0 \a0 \a0";
 }
 
 /** About **/
@@ -246,6 +307,21 @@ main {
 @media (max-width: 700px) {
   #projects-content {
     padding: 0 20px 6rem;
+  }
+
+  #resume-content .flex-between.item-title {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  #resume-content {
+    font-size: 0.6rem;
+  }
+
+  #resume-content #resume {
+    margin: 0;
+    padding: 10px;
   }
 }
 
